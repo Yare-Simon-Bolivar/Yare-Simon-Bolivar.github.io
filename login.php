@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password_hash'])) {
             $_SESSION['id'] = $row['id'];
             $_SESSION['username'] = $username;
-            header("Location: https://yare-simon-bolivar.github.io./admin.html");
+            header("Location: admin.html");
             exit();
         } else {
             echo "Contraseña incorrecta.";
