@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+ .menu {
+    
+    overflow: hidden;
+    position: absolute; /* Añadido */
+    top: 0; /* Añadido */
+    left: 0; /* Añadido */
+    width: 100%; /* Asegúrate de que el menú ocupe todo el ancho */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Cambiado a flex-start */
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #660000;;
+}
+
+header {
+    background-color: #8B0000; /* Rojo oscuro */
+    overflow: hidden;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+#noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.noticia {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2e8b57; /* Verde elegante */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}
+
+
+.social-links img {
+    width: 24px;
+    margin-left: 10px;
+}

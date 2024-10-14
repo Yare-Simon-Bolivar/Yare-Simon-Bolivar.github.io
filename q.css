@@ -1,0 +1,288 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #19437D; /* Color azul elegante */
+    padding: 10px 20px;
+}
+
+header .logo {
+    width: 200px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    background: #f1c40f;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+}
+
+.carousel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ajusta el ancho para que todas las imágenes se muestren en fila */
+    height: 100%;
+    position: relative; /* Asegura que los botones se posicionen correctamente */
+}
+
+.carousel .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel .slides img.active {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%; /* Centra los botones verticalmente en el carrusel */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-content {
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-section .imagen-historia,
+.info-section .imagen-alcalde,
+.info-section .imagen-mision {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-mision {
+    background-image: url('img/img.jpg');
+}
+
+.imagen-historia {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-alcalde {
+    background-image: url('img/Y.jpg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #0056b3; /* Azul oscuro */
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #333; /* Gris oscuro */
+}
+
+.btn {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Azul oscuro */
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef; /* Gris claro */
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Gris oscuro */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.responsive-iframe {
+    position: relative;
+    padding: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #2e8b57; /* Verde elegante */
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}
+
+.social-links img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+/* Estilos para el contenedor del mapa */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 5rem 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo en pantallas grandes */
+    height: 0;
+    padding-bottom: 28.125%; /* Aspect ratio 16:4.5 */
+    position: relative;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

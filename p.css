@@ -1,0 +1,1890 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #19437D; /* Color azul elegante */
+    padding: 10px 20px;
+}
+
+header .logo {
+    width: 200px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #f1c40f;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+}
+
+.carousel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ajusta el ancho para que todas las imágenes se muestren en fila */
+    height: 100%;
+    position: relative; /* Cambiado a relative para que los botones se posicionen correctamente */
+}
+
+.carousel .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel .slides img.active {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%; /* Centra los botones verticalmente en el carrusel */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-content {
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-section .imagen-iglesia,
+.info-section .imagen-diablos,
+.info-section .imagen-bolivar {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #0056b3; /* Azul oscuro */
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Gris oscuro */
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Gris oscuro */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.responsive-iframe {
+    position: relative;
+    padding: 56.25%;
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.eventos {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventos h2 {
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.responsive-iframe{
+    position:relative;
+    padding:56.25%;
+}
+
+.responsive-iframe iframe{
+     position:absolute;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+ }
+
+footer {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;  
+  text-align: center;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}
+
+.social-links {
+  text-align: center;
+  padding-right: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+.social-links img {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  margin-left: 10px; /* Espacio entre los iconos */
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+/* Estilos para el contenedor del mapa */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 5rem 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px; /* Aumentar el ancho máximo en pantallas grandes */
+    height: 0;
+    padding-bottom: 28.125%; /* Reducir el largo a la mitad (aspect ratio 16:4.5) */
+    position: relative;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    background-image: url('img/Yare.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.header-content {
+    margin-top: 20px;
+    color: white;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-section .imagen-iglesia,
+.info-section .imagen-diablos,
+.info-section .imagen-bolivar {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Media Queries */ /*
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#portada {
+    background-image: url('img/Yare.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-section .imagen-iglesia,
+.info-section .imagen-diablos,
+.info-section .imagen-bolivar {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Media Queries */ /*
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#portada {
+    background-image: url('img/Yare.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+.info-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.info-section .imagen-iglesia,
+.info-section .imagen-diablos,
+.info-section .imagen-bolivar {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#portada {
+    background-image: url('img/Yare.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+.info-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.info-section .imagen-iglesia,
+.info-section .imagen-diablos,
+.info-section .imagen-bolivar {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#portada {
+    background-image: url('img/Yare.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.imagen-iglesia {
+    background-image: url('img/Iglesia.webp');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-diablos {
+    background-image: url('img/Diablos.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.imagen-bolivar {
+    background-image: url('img/Bolívar.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#portada img {
+    width: 100%;
+    height: auto;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-text {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+*/

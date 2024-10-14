@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Simón Bolívar</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Noticias del Municipio Simón Bolívar</h1>
+    </header>
+    <main>
+        <div id="noticias"></div>
+    </main>
+    <script>
+        fetch('fetch_news.php')
+            .then(response => response.json())
+            .then(data => {
+                const noticiasDiv = document.getElementById('noticias');
+                data.forEach(noticia => {
+                    const noticiaElement = document.createElement('div');
+                    noticiaElement.classList.add('noticia');
+                    noticiaElement.innerHTML = `
+                        <h2 class="titulo">${noticia.titulo}</h2>
+                        ${noticia.imagen1 ? `<img src="${noticia.imagen1}" alt="Imagen de la noticia" class="imagen">` : ''}
+                        <p>${noticia.contenido}</p>
+                        ${noticia.imagen2 ? `<img src="${noticia.imagen2}" alt="Imagen de la noticia" class="imagen">` : ''}
+                        <small>${noticia.fecha_publicacion}</small>
+                    `;
+                    noticiasDiv.appendChild(noticiaElement);
+                });
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto Uni!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="q.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
+</head>
+<body>
+<header>
+    <a href="inicio.html">
+            <img src="img/logo.png" alt="Logo" class="logo">
+    </a>
+    <nav class="menu">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="welcome.html">Turismo</a></li>
+            <li><a href="ultimas_noticias.html">Noticias</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="carousel">
+    <div class="slides">
+        <img src="img/Diablos.jpeg" alt="Imagen 1">
+        <img src="img/1.webp" alt="Imagen 2">
+        <img src="img/perfil.jpg" alt="Imagen 3">
+        <img src="img/Bolívar.jpeg" alt="Imagen 4">
+        <img src="img/n.png" alt="Imagen 5">
+        <img src="img/Y.jpg" alt="Imagen 6">
+    </div>       
+     <button class="prev" onclick="showPrevImage()">❮</button>
+     <button class="next" onclick="showNextImage()">❯</button>
+</div>
+
+<script src="pr.js"></script>
+<main>
+    <section class="info-section">
+        <div class="card">
+            <div class="imagen-historia" alt="Imagen de la historia del municipio"></div>
+            <div class="card-content">
+                <h5 class="card-title">Historia del municipio Simón Bolívar</h5>
+                <p class="card-text">
+                    El Municipio Simón Bolívar es uno de los 21 municipios autónomos en los que se divide el Estado Miranda. Se encuentra ubicado en los Valles del Tuy, y es atravesado por el centro en dirección sur-norte por el contaminado río Tuy.
+                </p>
+                <a href="historia.html" class="btn btn-primary">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imagen-alcalde" alt="Imagen del alcalde"></div>
+            <div class="card-content">
+                <h5 class="card-title">Nuestro alcalde</h5>
+                <p class="card-text">
+                    Saúl Yánez es un destacado político venezolano que ha desempeñado un papel importante como alcalde en el municipio Simón Bolívar del estado Miranda en Venezuela. Ha tenido una larga trayectoria política y ha ocupado diferentes cargos a lo largo de los años.
+                </p>
+                <a href="alcalde.html" class="btn btn-primary">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imagen-mision" alt="Imagen de la misión"></div>
+            <div class="card-content">
+                <h5 class="card-title">Misión, Visión y Objetivos de la alcaldía</h5>
+                <p class="card-text">
+                    El ente de gobierno municipal es una corporación al servicio de la ciudadanía en general, que impulsa el desarrollo local sustentable, incentivando la corresponsabilidad social de la comunidad organizada en el ejercicio del poder,...
+                </p>
+                <a href="mision.html" class="btn btn-primary">Más información</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <h3>Conoce todo del Municipio Simón Bolívar, ¡Yare!</h3>
+        <a href="#">Ir al mapa</a>
+        <form action="">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" class="form-control" required />
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+</main>
+<section>
+    <div class="container mt-5 mb-5">
+        <h4>Aquí nos encontramos:</h4>
+            <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7201.875357962055!2d-66.74615452553846!3d10.192796551434128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2ae69005e4c40b%3A0xd82773c3d834ef1f!2zQWxjYWxkw61hIFNpbcOzbiBCb2zDrXZhcg!5e0!3m2!1ses!2sve!4v1728448626611!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100009243801761" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/YareAlcaldia" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/alcaldiayare/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="https://youtube.com/@alcaldiaprensayare1?si=zCgqvpFpQEIgyqDW" target="_blank"><img src="img/youtube.png" alt="YouTube"></a>
+    </div>
+</footer>
+</body>
+</html>

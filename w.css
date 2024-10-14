@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir espacio */
+    background-color: #19437D; /* Color azul elegante */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+header .logo {
+    width: 200px; /* Ajustar el tamaño del logo */
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    background: #f1c40f; /* Cambia el color de la barra al hacer hover */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center; /* Centrar el texto */
+    color: #003366; /* Azul elegante */
+}
+
+h2 {
+    color: #003366; /* Azul oscuro */
+    border-bottom: 2px solid #003366; /* Azul oscuro */
+    padding-bottom: 5px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.mission, .vision, .objectives {
+    margin-bottom: 20px;
+}
+
+.mission {
+    border-left: 5px solid #ff0000; /* Rojo */
+    padding-left: 15px;
+}
+
+.vision {
+    border-left: 5px solid #008000; /* Verde */
+    padding-left: 15px;
+}
+
+.objectives {
+    border-left: 5px solid #003366; /* Azul oscuro */
+    padding-left: 15px;
+}
+
+footer {
+    background-color: #2e8b57; /* Verde elegante */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: right;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}

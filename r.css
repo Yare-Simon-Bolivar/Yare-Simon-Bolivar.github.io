@@ -1,0 +1,101 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+         .menu {
+    
+    overflow: hidden;
+    position: absolute; /* Añadido */
+    top: 0; /* Añadido */
+    left: 0; /* Añadido */
+    width: 100%; /* Asegúrate de que el menú ocupe todo el ancho */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Cambiado a flex-start */
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #660000;;
+}
+
+        header {
+            background-color: #8B0000; /* rojo oscuro */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {  
+            color: #fff; /* blanco */
+        }
+
+
+        h2 {  
+            color: #003366; /* Azul oscuro */
+        }
+        h2 {
+            border-bottom: 2px solid #003366; /* Azul oscuro */
+            padding-bottom: 5px;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .mayor {
+            margin-bottom: 20px;
+        }
+
+        footer {
+    background-color: #2e8b57; /* Verde elegante */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: right;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}

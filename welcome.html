@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto Uni!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="p.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
+</head>
+<body>
+<header>
+    <a href="inicio.html">
+            <img src="img/logo.png" alt="Logo" class="logo">
+    </a>
+    <nav class="menu">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="welcome.html">Turismo</a></li>
+            <li><a href="ultimas_noticias.html">Noticias</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="carousel">
+    <div class="slides">
+        <img src="img/Diablos.jpeg" alt="Imagen 1">
+        <img src="img/Iglesia.webp" alt="Imagen 2">
+        <img src="img/perfil.jpg" alt="Imagen 3">
+        <img src="img/Bolívar.jpeg" alt="Imagen 4">
+        <img src="img/n.png" alt="Imagen 5">
+        <img src="img/Y.jpg" alt="Imagen 6">
+    </div>       
+     <button class="prev" onclick="showPrevImage()">❮</button>
+     <button class="next" onclick="showNextImage()">❯</button>
+</div>
+    <script src="pr.js"></script>
+
+    <main>
+        <section class="info-section">
+            <div class="card">
+                <div class="imagen-iglesia"></div>
+                <div class="card-content">
+                    <h5 class="card-title">Iglesia</h5>
+                    <p class="card-text">
+                        La iglesia San Francisco de Paula (siglo XVI) es el monumento más antiguo de San Francisco de Yare, en el municipio Simón Bolívar del estado Miranda. Templo colonial que marca el punto de partida y de llegada de los Diablos Danzantes de Yare.
+                    </p>
+                    <a href="https://haimaneltroudi.com/iglesia-san-francisco-de-paula-un-monumento-historico-nacional-en-yare/" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imagen-diablos"></div>
+                <div class="card-content">
+                    <h5 class="card-title">Diablos de Yare</h5>
+                    <p class="card-text">
+                        Los Diablos Danzantes de Yare son una festividad religiosa que se celebra en San Francisco de Yare, Estado Miranda (Venezuela), el día de Corpus Christi, llevada a cabo por las "Sociedades del Santísimo Sacramento". La fiesta es una versión local de los diablos danzantes de Corpus Christi.
+                    </p>
+                    <a href="https://es.wikipedia.org/wiki/Diablos_danzantes_de_Yare" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imagen-bolivar"></div>
+                <div class="card-content">
+                    <h5 class="card-title">Casa de Bolívar</h5>
+                    <p class="card-text">
+                        A dos cuadras de la plaza Bolívar, detrás de la iglesia San Francisco de Paula en Yare, estado Miranda, se localiza la casa que habitó El Libertador Simón Bolívar durante el siglo XVIII en esta población tuyera. Fue convertida en museo y decretada Monumento Histórico Nacional, según resolución publicada en Gaceta Oficial Nº 32.039 del 04 de agosto de 1980.
+                    </p>
+                    <a href="https://ultimasnoticias.com.ve/noticias/turismo/museo-simon-bolivar-en-yare-revive-214-anos-de-historia/" class="btn btn-primary">Más información</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h3>Conoce todo del Municipio Simon Bolivar, ¡Yare!</h3>
+            <a href="#">Ir al mapa</a>
+            <form action="">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" class="form-control" />
+                <butto type="submit" class="btn btn-primary">Enviar</butto>
+            </form>
+        </section>
+    </main>
+     <div class="container">
+        <div class="eventos">
+            <h2>Eventos Próximos</h2>
+            <div class="contenedor" id="eventos-proximos"></div>
+        </div>
+        <div class="eventos">
+            <h2>Eventos Actuales</h2>
+            <div class="contenedor" id="eventos-actuales"></div>
+        </div>
+        <div class="eventos">
+            <h2>Eventos Anteriores</h2>
+            <div class="contenedor" id="eventos-anteriores"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+
+    <section>
+    <div class="container mt-5 mb-5">
+        <h4>Aquí nos encontramos:</h4>
+            <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15707.291912790206!2d-66.76785998325398!3d10.195026872899405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2ae68522c29f13%3A0xaa0b7cb77c998718!2sSan%20Francisco%20de%20Yare%201212%2C%20Miranda!5e0!3m2!1ses!2sve!4v1728447059003!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=100009243801761" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+    <a href="https://twitter.com/YareAlcaldia" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+    <a href="https://www.instagram.com/alcaldiayare/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+    <a href="https://youtube.com/@alcaldiaprensayare1?si=zCgqvpFpQEIgyqDW" target="_blank"><img src="img/youtube.png" alt="YouTube"></a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

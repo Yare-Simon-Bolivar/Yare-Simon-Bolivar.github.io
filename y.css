@@ -1,0 +1,298 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f8f9fa; /* Fondo claro */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #19437D; /* Color azul elegante */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+header .logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    background: #f1c40f; /* Cambia el color de la barra al hacer hover */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333; /* Color del texto dentro de las tarjetas */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #19437D; /* Azul elegante */
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #6a11cb;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -20px;
+    left: 0;
+    color: #6a11cb;
+    font-size: 12px;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    border: none; 
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.eventos {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* Fondo claro para la sección de eventos */
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto {
+    padding: 20px;
+    text-align: center;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto .input-box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacto .input-box input,
+.contacto .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contacto .input-box input:focus,
+.contacto .input-box textarea:focus {
+    border-color: #6a11cb;
+}
+
+.contacto .input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.contacto .input-box input:focus + label,
+.contacto .input-box input:valid + label,
+.contacto .input-box textarea:focus + label,
+.contacto .input-box textarea:valid + label {
+    top: -20px;
+    left: 0;
+    color: #6a11cb;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .evento {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    background-color: #2e8b57;
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;  
+    text-align: center;
+}
+
+footer a:hover {
+    color: #d4edda; /* Verde claro */
+}
+
+.social-links {
+    text-align: center;
+    padding-right: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+.social-links img {
+    width: 24px; /* Ajusta el tamaño según sea necesario */
+    margin-left: 10px; /* Espacio entre los iconos */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 5px;
+    }
+}
